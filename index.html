@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Elegance in Black and Gray</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+  body, html {
+    margin: 0; padding: 0;
+    height: 100%;
+    background: #121212;
+    font-family: 'Poppins', sans-serif;
+    color: #d1d1d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    background: #222224;
+    border: 1px solid #444446;
+    border-radius: 22px;
+    box-shadow:
+      0 0 8px 0 #55555799,
+      inset 0 0 15px 2px #4a4a4a88;
+    width: 90vw;
+    max-width: 640px;
+    min-height: 480px;
+    padding: 36px 50px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+  }
+  section.active {
+    display: flex;
+    animation: fadein 1s ease forwards;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin-bottom: 18px;
+    color: #bbbabb;
+    text-shadow: 0 0 12px #a07c7caa;
+    letter-spacing: 0.05em;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    max-width: 460px;
+    color: #ccc;
+    text-shadow: 0 0 5px #3a3a3acc;
+  }
+
+  button.next-btn {
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 14px 44px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #646464, #3a3a3a);
+    color: #eee;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px #191919, -4px -4px 8px #636363;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    user-select: none;
+  }
+  button.next-btn:hover {
+    background: linear-gradient(145deg, #7a7a7a, #4a4a4a);
+    color: #fff;
+    box-shadow: 5px 5px 15px #262626, -5px -5px 15px #757575;
+    transform: scale(1.08);
+  }
+  button.next-btn:focus {
+    outline: 2px solid #999;
+    outline-offset: 4px;
+  }
+
+  button.next-btn svg {
+    fill: #ddd;
+    width: 20px;
+    height: 20px;
+    transition: fill 0.25s ease;
+  }
+  button.next-btn:hover svg {
+    fill: #fff;
+  }
+
+  .photo-container {
+    max-width: 95%;
+    max-height: 270px;
+    border-radius: 16px;
+    box-shadow: 0 0 16px #555555cc, inset 0 0 12px #3a3a3acc;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: auto;
+  }
+
+  .photo-narrative {
+    margin-bottom: 28px;
+    max-width: 460px;
+    font-size: 0.90rem;
+    font-weight: 300;
+    color: #c8c8c8;
+    text-shadow: 0 0 6px #2f2f2fcc;
+  }
+
+  .video-container {
+    width: 100%;
+    max-width: 100%;
+    max-height: 360px;
+    border-radius: 16px;
+    box-shadow: 0 0 16px #555555cc, inset 0 0 12px #3a3a3acc;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Container for back-next buttons side by side */
+  .btn-group {
+    width: 100%;
+    max-width: 460px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+  @keyframes fadein {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+</style>
+</head>
+<body>
+<main>
+  <!-- Section 1 -->
+  <section id="intro" class="active">
+    <h1>Keanu’s Feelings</h1>
+    <p>You know how much pride I have… but this time, I really tried my best. Click next to see more.</p>
+    <button class="next-btn" id="toPhotoBtn">
+      Next
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="photo1">
+    <h1>Yoou Dummy!</h1>
+    <div class="photo-container">
+      <img src="mw1.jpg" alt="Elegant black and gray artistic photo" />
+    </div>
+    <p class="photo-narrative">
+      Louis welson, first off all kamu bajingan yang pernah aku temuin karna aku ga akan pernah sepusing ini dan semikir ini buat buktiin how much I love someone. And yeah, that someone is you.
+      Aku ga tau habis ini kita masih bisa texting atau engga karna aku udah malu duluan mungkin buat text kamu lagi.
+      Aku emang ga se-effort kamu yang ngasih aku apapun itu, aku cuma bisa ngasih web kecil yang aku buat ini buat ungkapin semuanya, tapi aku cuma mau kamu tahu how much i love you Louis.
+    </p>
+    <button class="next-btn" id="toPhoto2Btn">
+      Next
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </section>
+
+  <!-- Section 3 -->
+  <section id="photo2">
+    <h1>Suppa Dummy!</h1>
+    <div class="photo-container">
+      <img src="mw4.jpg" alt="Another artistic photo" />
+    </div>
+    <p class="photo-narrative">
+      First impression kamu tuh honestly... weird. A guy who came in so boldly with all his feelings, terang-terangan nunjukin rasa suka. Aku bingung, aku awkward, I didn’t know how to react. Tapi justru dari situ, aku jadi tau seberapa tulusnya kamu.
+      Aku ragu waktu itu, tapi rasa ragu itu ilang karena sikap kamu juga. You made me feel safe. Made me feel wanted. Made me feel like I finally belonged somewhere. Aku jatuh cinta sama caramu, sama keberanian kamu, sama percaya dirimu ngenalin aku ke Roe. Waktu itu rasanya kayak aku punya keluarga lagi. Rasanya dicintai lagi. Dan itu bikin aku ngerasa hidup.
+    <div class="btn-group">
+      <button class="next-btn" id="backToPhoto1Btn" style="padding: 14px 32px;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:16px; height:16px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+      <button class="next-btn" id="toPhoto3Btn" style="padding: 14px 32px;">
+        Next
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:16px; height:16px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section id="photo3">
+    <h1>3rd</h1>
+    <div class="photo-container">
+      <img src="mw3.jpg" alt="Third artistic black and gray photo" />
+    </div>
+    <p class="photo-narrative">
+      Kalau kamu nanya, “Seberapa besar rasa kamu ke aku dibanding Alan?” Jawabannya nggak terhingga. Kamu bilang kalau kamu kenal aku duluan, kamu bakal perjuangin aku habis-habisan. Louis, kalimat itu… bikin aku ngerasa dilihat, disayang, diharapkan.
+      Satu hal yang harus kamu inget, aku dan Alan nggak pernah pacaran. Kita cuma FWA. Dia sering ngecewain aku, ngeremehin hal-hal kecil yang menurutku penting. Aku capek, Louis. Dan pas kamu ngilang beberapa hari itu, That trauma came back, Tapi aku nggak mau kehilangan kamu the way I lost him. Tapi aku nggak mau... Aku pengen kamu yang jadi obatnya. Cukup kamu. Bukan orang lain.
+      Dan soal Roe, dia salah satu hal terindah yang kamu bawa ke hidupku. Aku sayang banget sama dia. Kita bisa nyambung karena kadang kita punya cara berpikir yang mirip. Terima kasih karena udah ngenalin aku ke princess kecilmu.
+    </p>
+    <div class="btn-group">
+      <button class="next-btn" id="backToPhoto2Btn" style="padding: 14px 32px;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:16px; height:16px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Back
+      </button>
+      <button class="next-btn" id="toVideoBtn" style="padding: 14px 32px;">
+        Next
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:16px; height:16px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </section>
+
+    <!-- Section 5 -->
+  <section id="video">
+    <h1>Thank you, Louis</h1>
+    <p>For the love, the light, and for letting me into your world—even just for a while. I’m sorry for not being able to express my love in the way you needed it.</p>
+    <div class="video-container">   
+    <video width="640" height="480" autoplay muted playsinline>
+    <source src="VID_20250529160228.mp4" type="video/mp4">
+    </video>
+    </div>
+    <button class="next-btn" id="backBtn" style="margin-top:16px; padding: 14px 44px;">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:16px; height:16px; margin-right: 8px;">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+      </svg>
+      Back
+    </button>
+  </section>
+</main>
+
+<script>
+  const introSection = document.getElementById('intro');
+  const photo1Section = document.getElementById('photo1');
+  const photo2Section = document.getElementById('photo2');
+  const photo3Section = document.getElementById('photo3');
+  const videoSection = document.getElementById('video');
+
+  // Buttons
+  const toPhotoBtn = document.getElementById('toPhotoBtn');
+  const toPhoto2Btn = document.getElementById('toPhoto2Btn');
+  const backToPhoto1Btn = document.getElementById('backToPhoto1Btn');
+  const toPhoto3Btn = document.getElementById('toPhoto3Btn');
+  const backToPhoto2Btn = document.getElementById('backToPhoto2Btn');
+  const toVideoBtn = document.getElementById('toVideoBtn');
+  const backBtn = document.getElementById('backBtn');
+
+  // Navigation logic
+  toPhotoBtn.addEventListener('click', () => {
+    introSection.classList.remove('active');
+    photo1Section.classList.add('active');
+  });
+
+  toPhoto2Btn.addEventListener('click', () => {
+    photo1Section.classList.remove('active');
+    photo2Section.classList.add('active');
+  });
+
+  backToPhoto1Btn.addEventListener('click', () => {
+    photo2Section.classList.remove('active');
+    photo1Section.classList.add('active');
+  });
+
+  toPhoto3Btn.addEventListener('click', () => {
+    photo2Section.classList.remove('active');
+    photo3Section.classList.add('active');
+  });
+
+  backToPhoto2Btn.addEventListener('click', () => {
+    photo3Section.classList.remove('active');
+    photo2Section.classList.add('active');
+  });
+
+  toVideoBtn.addEventListener('click', () => {
+    photo3Section.classList.remove('active');
+    videoSection.classList.add('active');
+  });
+
+  backBtn.addEventListener('click', () => {
+    videoSection.classList.remove('active');
+    photo3Section.classList.add('active');
+  });
+</script>
+</body>
+</html>
